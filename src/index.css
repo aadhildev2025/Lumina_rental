@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0a0a0a;
+  --color-secondary: #52525b;
+  --color-accent: #6366f1;
+  --color-surface: #fbfcfd;
+
+  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+}
+
+:root {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: var(--color-primary);
+  background-color: var(--color-surface);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+}
+
+/* Custom selection color */
+::selection {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+/* Base heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply tracking-tight font-extrabold;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Subtle fade-in for images */
+img {
+  @apply transition-opacity duration-700;
+}
+
+.img-loading {
+  opacity: 0;
+}
+
+.img-loaded {
+  opacity: 1;
+}
